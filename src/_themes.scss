@@ -9,6 +9,7 @@
   --main-content-background-color: #ffffff;
   --main-content-text-color: #222222;
   --main-content-border-color: #00000042;
+  --main-content-inverted-border-color: #ffffff56;
 }
 
 [data-theme="dark"] {
@@ -22,4 +23,5 @@
   --main-content-background-color: #222222;
   --main-content-text-color: #ffffff;
   --main-content-border-color: #ffffff56;
+  --main-content-inverted-border-color: #00000042;
 }

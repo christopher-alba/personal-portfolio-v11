@@ -11,36 +11,55 @@
       text-align: center;
       align-items: center;
     }
-    button {
-        width: fit-content;
-        padding: 10px 30px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        background: none;
-        color: var(--main-content-text-color);
-        border: 0.5px solid var(--main-content-border-color);
-        border-radius: 5px;
-        cursor: pointer;
-        &:hover {
-            background: var(--main-content-text-color);
-            color: var(--main-content-background-color);
-        }
+    .wrapper {
+      overflow: hidden;
+    }
+    .wrapper-2 {
+      text-align: right;
+      padding-right: 600px;
+      @media (max-width: 1400px) {
+        padding-right: 0;
+        text-align: center;
+      }
     }
   }
   p {
-    margin-bottom: 0;
+    margin: 0;
+    color: var(--main-content-text-color);
+    padding: 20px;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 5px;
+    @media (max-width: 1400px) {
+      font-size: 1.5rem;
+    }
   }
   h1 {
     margin: 0;
-    font-size: 3rem;
-    color: var(--tertiary-color);
+    position: relative;
+    font-size: 7rem;
+    span {
+      color: var(--tertiary-color);
+    }
+    padding: 0 50px;
+    border-bottom: 50px solid var(--main-content-text-color);
+    @media (max-width: 1400px) {
+      font-size: 3.5rem;
+      border-bottom-width: 25px;
+      padding: 0 10px;
+    }
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 200;
+    @media (max-width: 1400px) {
+      font-size: 1.5rem;
+    }
+    color: var(--main-content-text-color);
     span {
       font-weight: 600;
+      color: var(--tertiary-color);
     }
     a {
       color: var(--main-content-text-color);
