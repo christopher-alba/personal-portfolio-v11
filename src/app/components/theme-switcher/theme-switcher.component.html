@@ -1,9 +1,11 @@
 <div class="theme-switcher">
-  <label class="switch">
-    <input
-      type="checkbox"
-      [checked]="isLightTheme"
-      (change)="onThemeSwitchChange()"
-    />
+  <fa-icon [icon]="moon"/>
+  <label class="switch" [tabIndex]="0" >
+    <input type="checkbox" [checked]="isLightTheme" [tabIndex]="-1"
+    (change)="onThemeSwitchChange()">
+    <span class="slider round"></span>
   </label>
+  <fa-icon [icon]="sun"/>
 </div>
+
+

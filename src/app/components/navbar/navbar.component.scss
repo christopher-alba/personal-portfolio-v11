@@ -1,0 +1,45 @@
+.navbar-main {
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.navbar-main > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-main h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--tertiary-color);
+  margin-right: 50px;
+}
+
+.shortcuts {
+    display: flex;
+    height: 100%;
+}
+
+.left-div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100px;
+}
+
+.shortcut {
+    height: 100%;
+    background: none;
+    border: none;
+    &:hover, &:focus-visible {
+        background: var(--tertiary-color);
+        color: white;
+        outline: none;
+    }
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    color: var(--main-content-text-color);
+}
