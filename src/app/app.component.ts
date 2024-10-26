@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CareerComponent } from './components/career/career.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { SkillsComponent } from './components/skills/skills.component';
     CareerComponent,
     NavbarComponent,
     SkillsComponent,
+    LandingComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

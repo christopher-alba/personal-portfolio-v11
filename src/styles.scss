@@ -2,10 +2,13 @@
 @import "themes";
 
 html,
-body,
-button {
-  height: 100%;
+body {
+  min-height: 100%;
   margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+button {
   font-family: "Inter", sans-serif;
 }
 

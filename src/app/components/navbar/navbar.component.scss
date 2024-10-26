@@ -1,8 +1,10 @@
 .navbar-main {
   min-height: 100px;
+  background: var(--main-content-background-color);
   box-sizing: border-box;
-  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.281);
   position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-main > .container {
@@ -115,6 +117,7 @@
   @media (max-width: 1100px){
     display: flex;
   }
+  z-index: 1000;
 }
 
 .drawer-links {
