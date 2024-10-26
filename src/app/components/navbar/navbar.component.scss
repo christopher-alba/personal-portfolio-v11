@@ -109,7 +109,7 @@
 .drawer {
   height: calc(100vh - 100px);
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 100px;
   background: var(--main-content-background-color);
   display: none;
