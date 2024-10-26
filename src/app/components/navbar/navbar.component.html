@@ -1,7 +1,9 @@
 <div class="navbar-main">
   <div class="container">
     <div class="left-div">
-      <h1>Chris Alba</h1>
+      <button class="brand">
+        <h1>Chris Alba</h1>
+      </button>
       <div class="shortcuts">
         <button class="shortcut">About</button>
         <button class="shortcut">Skills</button>
@@ -9,6 +11,22 @@
         <button class="shortcut">Projects</button>
       </div>
     </div>
+    <div class="right-div">
+      <app-theme-toggle />
+      <button class="menu" (click)="toggleDrawer()">
+        <fa-icon [icon]="showDrawer ? close : menu"></fa-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="drawer" *ngIf="showDrawer" @slideInOut>
+  <div class="drawer-links">
+    <button class="drawer-shortcut">About</button>
+    <button class="drawer-shortcut">Skills</button>
+    <button class="drawer-shortcut">Career</button>
+    <button class="drawer-shortcut">Projects</button>
+  </div>
+  <div class="drawer-toggle">
     <app-theme-toggle />
   </div>
 </div>

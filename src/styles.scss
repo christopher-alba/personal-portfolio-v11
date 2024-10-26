@@ -2,9 +2,11 @@
 @import "themes";
 
 html,
-body {
+body,
+button {
   height: 100%;
   margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
