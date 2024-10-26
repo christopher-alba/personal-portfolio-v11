@@ -13,6 +13,94 @@ button {
 }
 
 .container {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
+  @media (max-width: 1400px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 95%;
+  }
+}
+
+.wrapper {
+  position: relative;
+  .backdrop {
+    background: var(--main-content-text-color);
+    height: 300px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 0;
+    text-align: center;
+    top: 0;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 70px;
+      color: var(--main-content-background-color);
+      @media (max-width: 600px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    div.overlay {
+      background: var(--main-content-secondary-background-color);
+      color: var(--main-content-text-color);
+      padding: 100px 200px;
+      font-size: 1.5rem;
+      border-radius: 15px;
+      @media (max-width: 1400px) {
+        padding: 50px 100px;
+      }
+      @media (max-width: 600px) {
+        padding: 25px 50px;
+        font-size: 1rem;
+      }
+    }
+
+    div.dynamic-content {
+      padding: 100px 0;
+      @media (max-width: 600px) {
+        padding: 50px;
+      }
+    }
+
+    div.traits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      div.trait {
+        fa-icon {
+          font-size: 7rem;
+          color: var(--tertiary-color);
+          @media (max-width: 1400px) {
+            font-size: 5rem;
+          }
+          @media (max-width: 600px) {
+            font-size: 3rem;
+          }
+        }
+        padding: 50px;
+        box-sizing: border-box;
+        font-size: 1.2rem;
+        width: 33%;
+        @media (max-width: 1400px) {
+          width: 50%;
+        }
+        @media (max-width: 600px) {
+          width: 100%;
+          padding: 10px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
