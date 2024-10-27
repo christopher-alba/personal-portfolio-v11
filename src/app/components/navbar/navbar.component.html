@@ -1,14 +1,22 @@
-<div class="navbar-main">
+<div *ngIf="isNavbarVisible" class="navbar-main" @navbarInOut>
   <div class="container">
     <div class="left-div">
-      <button class="brand">
+      <button class="brand" (click)="navigateToSection('landing')">
         <h1>Chris Alba</h1>
       </button>
       <div class="shortcuts">
-        <button class="shortcut">About</button>
-        <button class="shortcut">Skills</button>
-        <button class="shortcut">Career</button>
-        <button class="shortcut">Projects</button>
+        <button class="shortcut" (click)="navigateToSection('about')">
+          About
+        </button>
+        <button class="shortcut" (click)="navigateToSection('skills')">
+          Skills
+        </button>
+        <button class="shortcut" (click)="navigateToSection('career')">
+          Career
+        </button>
+        <button class="shortcut" (click)="navigateToSection('projects')">
+          Projects
+        </button>
       </div>
     </div>
     <div class="right-div">
@@ -21,10 +29,18 @@
 </div>
 <div class="drawer" *ngIf="showDrawer" @slideInOut>
   <div class="drawer-links">
-    <button class="drawer-shortcut">About</button>
-    <button class="drawer-shortcut">Skills</button>
-    <button class="drawer-shortcut">Career</button>
-    <button class="drawer-shortcut">Projects</button>
+    <button class="drawer-shortcut" (click)="navigateToSection('about')">
+      About
+    </button>
+    <button class="drawer-shortcut" (click)="navigateToSection('skills')">
+      Skills
+    </button>
+    <button class="drawer-shortcut" (click)="navigateToSection('career')">
+      Career
+    </button>
+    <button class="drawer-shortcut" (click)="navigateToSection('projects')">
+      Projects
+    </button>
   </div>
   <div class="drawer-toggle">
     <app-theme-toggle />

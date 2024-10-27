@@ -1,0 +1,30 @@
+div.traits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    div.trait {
+      fa-icon {
+        font-size: 7rem;
+        color: var(--tertiary-color);
+        @media (max-width: 1400px) {
+          font-size: 5rem;
+        }
+        @media (max-width: 600px) {
+          font-size: 3rem;
+        }
+      }
+      padding: 50px;
+      box-sizing: border-box;
+      font-size: 1.2rem;
+      width: 33%;
+      @media (max-width: 1400px) {
+        width: 50%;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+      }
+    }
+  }
