@@ -1,0 +1,38 @@
+<div class="technologies">
+  <div class="card" *ngFor="let tech of techData">
+    <div
+      class="banner"
+      [ngClass]="
+        tech.usedAtWork ? 'usedAtWork' : tech.usedAsHobby ? 'usedAsHobby' : ''
+      "
+    >
+      <p *ngIf="!tech.usedAsHobby && !tech.usedAtWork" style="color: var(--main-content-text-color)">Used at University</p>
+      <p *ngIf="tech.usedAsHobby && !tech.usedAtWork">Used as Hobby</p>
+      <p *ngIf="tech.usedAtWork">Used at Work</p>
+    </div>
+    <h3>{{ tech.name }}</h3>
+    <h5>Comfort Rating</h5>
+    <div>
+      <fa-icon
+        [icon]="star"
+        [ngClass]="tech.comfortRating >= 1 ? 'filled' : ''"
+      />
+      <fa-icon
+        [icon]="star"
+        [ngClass]="tech.comfortRating >= 2 ? 'filled' : ''"
+      />
+      <fa-icon
+        [icon]="star"
+        [ngClass]="tech.comfortRating >= 3 ? 'filled' : ''"
+      />
+      <fa-icon
+        [icon]="star"
+        [ngClass]="tech.comfortRating >= 4 ? 'filled' : ''"
+      />
+      <fa-icon
+        [icon]="star"
+        [ngClass]="tech.comfortRating >= 5 ? 'filled' : ''"
+      />
+    </div>
+  </div>
+</div>

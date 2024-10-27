@@ -1,0 +1,29 @@
+<div class="tab-buttons">
+  <button
+    *ngFor="let tab of tabs; let i = index"
+    (click)="selectTab(i)"
+    [class.active]="tab.active"
+  >
+    {{ tab.title }}
+  </button>
+</div>
+<div class="dropdown-wrapper">
+  <div>
+    <button class="tab-dropdown" (click)="toggleDropdownOptions()">
+      <h3>{{ currentTab?.title }}</h3>
+      <fa-icon [icon]="showDropdownOptions ? arrowUp: arrowDown " />
+    </button>
+  </div>
+  <div class="tab-dropdown-options" *ngIf="showDropdownOptions">
+    <button
+      *ngFor="let tab of tabs; let i = index"
+      (click)="selectTab(i)"
+      [class.active]="tab.active"
+    >
+      {{ tab.title }}
+    </button>
+  </div>
+</div>
+<div class="tab-content">
+  <ng-content></ng-content>
+</div>
