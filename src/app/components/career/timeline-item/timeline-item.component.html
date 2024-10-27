@@ -1,0 +1,16 @@
+<div class="item-wrapper" [ngClass]="endDate === 'Present' ? 'current' : ''">
+  <div class="dates">
+    <p>{{ endDate }}</p>
+    <p>{{ startDate }}</p>
+  </div>
+  <div class="content">
+    <h2 class="role">{{ role }}</h2>
+    <h2>{{ company }}</h2>
+    <p>{{ summary }}</p>
+    <div class="techs">
+      <div *ngFor="let tech of technologies">
+        {{ tech }}
+      </div>
+    </div>
+  </div>
+</div>

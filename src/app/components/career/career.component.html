@@ -1,1 +1,30 @@
-<p>career works!</p>
+<div class="wrapper">
+  <div class="backdrop"></div>
+  <div class="container">
+    <div class="content">
+      <h1>3. Career History</h1>
+      <div class="overlay">
+        <p>
+          Learn how I built the foundations of my career through internships,
+          all the way through to landing a full time engineering role. If you’re
+          interested, expand the timeline to see the full history and
+          educational background too.
+        </p>
+      </div>
+      <div class="dynamic-content">
+        @for (item of companies; track $index) {
+        <app-timeline-item
+          *ngIf="$index <= maxIndex"
+          [startDate]="item.startDate"
+          [endDate]="item.endDate ?? 'Present'"
+          [company]="item.name"
+          [role]="item.position"
+          [summary]="item.summary"
+          [technologies]="item.technologies"
+        />
+        }
+        <button (click)="toggleIndex()">{{maxIndex > 3 ? 'Hide' : 'View All'}}</button>
+      </div>
+    </div>
+  </div>
+</div>
