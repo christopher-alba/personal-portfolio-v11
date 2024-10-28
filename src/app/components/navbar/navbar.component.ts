@@ -65,7 +65,6 @@ export class NavbarComponent {
       // Scrolling up
       if (!this.isScrolling) {
         this.isNavbarVisible = true;
-        this.showDrawer = true;
       }
     }
 
