@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" data-aos="fade-up">
   <div class="backdrop"></div>
   <div class="container">
     <div class="content">
@@ -23,7 +23,9 @@
           [technologies]="item.technologies"
         />
         }
-        <button (click)="toggleIndex()">{{maxIndex > 3 ? 'Hide' : 'View All'}}</button>
+        <button (click)="toggleIndex()">
+          {{ maxIndex > 3 ? "Hide" : "View All" }}
+        </button>
       </div>
     </div>
   </div>

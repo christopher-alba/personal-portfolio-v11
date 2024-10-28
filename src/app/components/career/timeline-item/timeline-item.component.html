@@ -1,4 +1,8 @@
-<div class="item-wrapper" [ngClass]="endDate === 'Present' ? 'current' : ''">
+<div
+  class="item-wrapper"
+  [ngClass]="endDate === 'Present' ? 'current' : ''"
+  data-aos="fade-up"
+>
   <div class="dates">
     <p>{{ endDate }}</p>
     <p>{{ startDate }}</p>

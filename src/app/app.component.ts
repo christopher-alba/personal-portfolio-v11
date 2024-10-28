@@ -5,6 +5,7 @@ import { CareerComponent } from './components/career/career.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { LandingComponent } from './components/landing/landing.component';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -21,5 +22,7 @@ import { LandingComponent } from './components/landing/landing.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  
+  ngOnInit() {
+    AOS.init({ once: false, duration: 1000 });
+  }
 }
