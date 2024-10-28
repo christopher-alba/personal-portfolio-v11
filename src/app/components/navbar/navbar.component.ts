@@ -60,9 +60,13 @@ export class NavbarComponent {
     if (currentScroll > this.lastScrollTop) {
       // Scrolling down
       this.isNavbarVisible = false;
+      this.showDrawer = false;
     } else {
       // Scrolling up
-      if (!this.isScrolling) this.isNavbarVisible = true;
+      if (!this.isScrolling) {
+        this.isNavbarVisible = true;
+        this.showDrawer = true;
+      }
     }
 
     this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
